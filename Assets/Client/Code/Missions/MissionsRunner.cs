@@ -1,4 +1,5 @@
 ﻿using Client.Code.Missions.Tree;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Client.Code.Missions
@@ -7,8 +8,6 @@ namespace Client.Code.Missions
     {
         public MissionsTreeConfig Tree;
 
-        public void Start()
-        {
-        }
+        public void Start() => Tree.Root.RunAsync().Forget();
     }
 }

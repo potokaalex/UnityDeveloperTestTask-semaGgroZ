@@ -13,26 +13,30 @@ MonoBehaviour:
   m_Name: MissionTree1
   m_EditorClassIdentifier: 
   Root:
-    List:
-    - rid: 438610727282671628
-    - rid: 438610727282671629
-    - rid: 438610727282671630
+    rid: 438610727282671638
   references:
     version: 2
     RefIds:
-    - rid: 438610727282671628
+    - rid: 438610727282671638
+      type: {class: ChainNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
+      data:
+        Nodes:
+        - rid: 438610727282671639
+        - rid: 438610727282671640
+        - rid: 438610727282671641
+    - rid: 438610727282671639
       type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
       data:
         Mission:
           <V>k__BackingField: {fileID: 11400000, guid: cfcb942f16db8894f8ce54257e07f4fb, type: 2}
         StartDelay: 0
-    - rid: 438610727282671629
+    - rid: 438610727282671640
       type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
       data:
         Mission:
           <V>k__BackingField: {fileID: 11400000, guid: 4db1f68de1d30ad41a75defb67d3655c, type: 2}
         StartDelay: 5
-    - rid: 438610727282671630
+    - rid: 438610727282671641
       type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
       data:
         Mission:
