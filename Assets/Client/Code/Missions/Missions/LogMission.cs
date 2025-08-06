@@ -6,10 +6,10 @@ namespace Client.Code.Missions.Missions
     [CreateAssetMenu(menuName = "Client/Missions/LogMission", fileName = "LogMission", order = 0)]
     public class LogMission : MissionBase
     {
-        protected override UniTask Run()
+        public override UniTask StartAsync()
         {
             Debug.Log(Name);
-            return UniTask.CompletedTask; 
+            return UniTask.CompletedTask;
         }
     }
 }

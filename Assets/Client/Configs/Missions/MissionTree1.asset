@@ -35,7 +35,7 @@ MonoBehaviour:
       data:
         Mission:
           <V>k__BackingField: {fileID: 11400000, guid: 4db1f68de1d30ad41a75defb67d3655c, type: 2}
-        StartDelay: 5
+        StartDelay: 2
     - rid: 438610727282671641
       type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
       data:

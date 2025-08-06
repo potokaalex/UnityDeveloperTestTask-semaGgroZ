@@ -13,8 +13,8 @@ namespace Client.Code.Missions.Tree
 
         public async UniTask RunAsync()
         {
-            await UniTask.Delay(StartDelay);
-            Mission.I.Start();
+            await UniTask.Delay(TimeSpan.FromSeconds(StartDelay));
+            await Mission.I.StartAsync();
         }
     }
 }
