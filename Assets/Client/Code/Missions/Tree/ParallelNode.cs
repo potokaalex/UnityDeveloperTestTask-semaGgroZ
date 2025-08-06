@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using SaintsField;
 using UnityEngine;
@@ -11,10 +12,10 @@ namespace Client.Code.Missions.Tree
     {
         [SerializeReference, ReferencePicker] public List<IMissionTreeNode> Nodes;
 
-        public UniTask RunAsync()
+        public UniTask StartAsync(CancellationToken ctsToken)
         {
             foreach (var node in Nodes)
-                node.RunAsync().Forget();
+                node.StartAsync(ctsToken).Forget();
             return UniTask.CompletedTask;
         }
     }

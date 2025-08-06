@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Client.Code.Missions.Missions
@@ -7,6 +8,6 @@ namespace Client.Code.Missions.Missions
     {
         public string Name;
 
-        public abstract  UniTask StartAsync();
+        public abstract UniTask StartAsync(CancellationToken ctsToken);
     }
 }

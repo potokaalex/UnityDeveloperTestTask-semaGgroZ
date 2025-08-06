@@ -1,9 +1,10 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Threading;
+using Cysharp.Threading.Tasks;
 
 namespace Client.Code.Missions.Tree
 {
     public interface IMissionTreeNode
     {
-        UniTask RunAsync();
+        UniTask StartAsync(CancellationToken ctsToken);
     }
 }

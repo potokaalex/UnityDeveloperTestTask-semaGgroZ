@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Client.Code.Missions.Missions;
 using Cysharp.Threading.Tasks;
 using SaintsField;
@@ -6,15 +7,17 @@ using SaintsField;
 namespace Client.Code.Missions.Tree
 {
     [Serializable]
-    public struct MissionNode : IMissionTreeNode
+    public class MissionNode : IMissionTreeNode
     {
         public SaintsObjInterface<IMission> Mission;
         public int StartDelay;
+        private readonly Timer _timer = new();
 
-        public async UniTask RunAsync()
+        public async UniTask StartAsync(CancellationToken ctsToken)
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(StartDelay));
-            await Mission.I.StartAsync();
+            ctsToken.Register(_timer.Cancel);
+            await _timer.StartAsync(StartDelay * 1000);
+            await Mission.I.StartAsync(ctsToken);
         }
     }
 }
