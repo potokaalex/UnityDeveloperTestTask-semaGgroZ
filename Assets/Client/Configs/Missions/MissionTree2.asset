@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d40054d45b41bab418f60ff1787565, type: 3}
+  m_Name: MissionTree2
+  m_EditorClassIdentifier: 
+  Root:
+    List:
+    - rid: 438610727282671631
+    - rid: 438610727282671632
+  references:
+    version: 2
+    RefIds:
+    - rid: 438610727282671631
+      type: {class: ListNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
+      data:
+        List:
+        - rid: 438610727282671633
+        - rid: 438610727282671634
+        - rid: 438610727282671635
+    - rid: 438610727282671632
+      type: {class: ListNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
+      data:
+        List:
+        - rid: 438610727282671636
+        - rid: 438610727282671637
+    - rid: 438610727282671633
+      type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
+      data:
+        Mission:
+          <V>k__BackingField: {fileID: 11400000, guid: cfcb942f16db8894f8ce54257e07f4fb, type: 2}
+        StartDelay: 0
+    - rid: 438610727282671634
+      type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
+      data:
+        Mission:
+          <V>k__BackingField: {fileID: 11400000, guid: 4db1f68de1d30ad41a75defb67d3655c, type: 2}
+        StartDelay: 0
+    - rid: 438610727282671635
+      type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
+      data:
+        Mission:
+          <V>k__BackingField: {fileID: 11400000, guid: 9e6d6fa279c370a428a79b25a8e492e7, type: 2}
+        StartDelay: 0
+    - rid: 438610727282671636
+      type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
+      data:
+        Mission:
+          <V>k__BackingField: {fileID: 11400000, guid: be487726da693774082ac32f6ff69ce2, type: 2}
+        StartDelay: 0
+    - rid: 438610727282671637
+      type: {class: MissionNode, ns: Client.Code.Missions.Tree, asm: Assembly-CSharp}
+      data:
+        Mission:
+          <V>k__BackingField: {fileID: 11400000, guid: 200b3cd45dab94e4ca36daffb628e0ad, type: 2}
+        StartDelay: 0

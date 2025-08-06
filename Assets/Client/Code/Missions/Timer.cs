@@ -15,7 +15,6 @@ namespace Client.Code.Missions
             try
             {
                 await UniTask.Delay(ms, cancellationToken: _cts.Token);
-
                 onComplete?.Invoke();
             }
             catch (OperationCanceledException)
